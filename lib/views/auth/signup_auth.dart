@@ -29,7 +29,6 @@ class _SignUpState extends State<SignUp> {
           .signUpwithEmailANdPassword(
               email_id_controller.text, password_controller.text)
           .then((val) {
-        print("${val.uid}");
         Navigator.pushReplacement(
             context, MaterialPageRoute(builder: (context) => ChatRoom()));
       });
@@ -246,7 +245,7 @@ class _SignUpState extends State<SignUp> {
                               navMeToSignIn();
                             },
                             child: Text(
-                              "Already Joined Us! Come Here's a way in",
+                              "Already Joined! Wow. Come Here's a way in",
                               style: TextStyle(
                                   color: Color.fromRGBO(143, 148, 251, 1)),
                             ),

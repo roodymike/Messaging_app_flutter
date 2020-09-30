@@ -12,7 +12,16 @@ class _signin_authState extends State<signin_auth>
   AnimationController _controller;
   TextEditingController email_id_controller = new TextEditingController();
   TextEditingController password_controller = new TextEditingController();
-
+  navmetoSignUp() {
+    print("Navigating to Sign Up Screen");
+    Navigator.pushReplacement(
+        context, MaterialPageRoute(builder: (context) => SignUp()));
+  }
+  navmetofpass() {
+    print("Navigating to Sign Up Screen");
+    Navigator.pushReplacement(
+        context, MaterialPageRoute(builder: (context) => SignUp()));
+  }
   @override
   void initState() {
     _controller = AnimationController(vsync: this);
@@ -190,25 +199,13 @@ class _signin_authState extends State<signin_auth>
                       FadeAnimation(
                           2,
                           GestureDetector(
-                            onTap: () {
-                              SignUp();
+                            onTap: (){
+                              navmetoSignUp();
                             },
-                            child: Container(
-                              height: 50,
-                              decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(10),
-                                  gradient: LinearGradient(colors: [
-                                    Color.fromRGBO(143, 148, 251, 1),
-                                    Color.fromRGBO(143, 148, 251, .6),
-                                  ])),
-                              child: Center(
-                                child: Text(
-                                  "SignUp",
-                                  style: TextStyle(
-                                      color: Colors.white,
-                                      fontWeight: FontWeight.bold),
-                                ),
-                              ),
+                            child: Text(
+                              "Wanna Join! Click Here",
+                              style: TextStyle(
+                                  color: Color.fromRGBO(143, 148, 251, 1)),
                             ),
                           )),
                       SizedBox(
@@ -216,10 +213,15 @@ class _signin_authState extends State<signin_auth>
                       ),
                       FadeAnimation(
                           1.5,
-                          Text(
-                            "Forgot Password?",
-                            style: TextStyle(
-                                color: Color.fromRGBO(143, 148, 251, 1)),
+                          GestureDetector(
+                            onTap: (){
+                              navmetofpass();
+                              },
+                            child: Text(
+                              "Forgot Password?",
+                              style: TextStyle(
+                                  color: Color.fromRGBO(143, 148, 251, 1)),
+                            ),
                           )),
                     ],
                   ),
