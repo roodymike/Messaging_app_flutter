@@ -24,7 +24,7 @@ class _signin_authState extends State<signin_auth>
   }
   @override
   void initState() {
-    _controller = AnimationController(vsync: this);
+    //_controller = AnimationController(vsync: this);
     super.initState();
   }
 
